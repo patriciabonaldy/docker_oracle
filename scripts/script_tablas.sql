@@ -2,7 +2,7 @@ alter session set "_ORACLE_SCRIPT"=true;
 
 -- Creamos las tablas
 
-CREATE SEQUENCE SEQUENCE1 INCREMENT BY 1;
+CREATE SEQUENCE meli1.SEQUENCE1 INCREMENT BY 1;
 
 create table meli1.lote_site (
 	id_lote number(10) NOT NULL,
