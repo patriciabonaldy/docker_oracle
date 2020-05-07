@@ -1,8 +1,11 @@
 alter session set "_ORACLE_SCRIPT"=true;
 
 -- Creamos las tablas
-create table lote_site (
-	id_lote number(10) primary key,
+
+CREATE SEQUENCE SEQUENCE1 INCREMENT BY 1;
+
+create table meli1.lote_site (
+	id_lote number(10) NOT NULL,
 	nombre_archivo varchar2(100),
 	encode varchar2(10),
 	extension varchar2(5),
@@ -13,7 +16,10 @@ create table lote_site (
 	detalle varchar2(1000) 
 );
 
-create table detalle_lote_site (
+ALTER TABLE meli1.lote_site
+  ADD (CONSTRAINT lote_site_pk PRIMARY KEY (id_lote) );
+
+create table meli1.detalle_lote_site (
 	id_lote number(10),
  	site varchar2(20),
 	id_item number,
@@ -27,13 +33,8 @@ create table detalle_lote_site (
 	(id_lote,site,id_item)
 );
 
--- Creamos los sinonimos publicos para las tablas creadas
-create or replace public synonym detalle_lote_site for detalle_lote_site;
-create or replace public synonym lote_site for lote_site;
 
--- Colocaos los grant para el usuario de meli
-GRANT SELECT, INSERT, UPDATE, DELETE ON lote_site TO meli;
-GRANT SELECT, INSERT, UPDATE, DELETE ON detalle_lote_site TO meli;    
+
 
 -- Creamos comentarios a las columnas de las tablas creadas
 comment on column detalle_lote_site.id_lote is 'ID de lote conformado por numerico, pertenece a la PK.';
@@ -54,5 +55,6 @@ comment on column lote_site.fecha_insercion is 'Fecha en que se inserto el regis
 comment on column lote_site.tiempo_insercion is 'Tiempo en segundos que tardo la insercion.';
 comment on column lote_site.estado is 'Indica el estado ACTIVE / NON ACTIVE.';
 comment on column lote_site.detalle is 'Detalle del item.';
+
 
 exit;
