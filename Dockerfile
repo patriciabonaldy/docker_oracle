@@ -9,7 +9,7 @@ ENV RELAX_SECURITY 1
 
 #VOLUME ./u01/app/oracle
 
-ADD scripts/init.sql /docker-entrypoint-initdb.d/
+#ADD scripts/init.sql /docker-entrypoint-initdb.d/
 ADD scripts/script_alta_usuario.sql /docker-entrypoint-initdb.d/
 ADD scripts/script_tablas.sql /docker-entrypoint-initdb.d/
 
