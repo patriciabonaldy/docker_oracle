@@ -1,5 +1,3 @@
-alter session set "_ORACLE_SCRIPT"=true;
-
 -- Creamos las tablas
 
 CREATE SEQUENCE meli1.SEQUENCE1 INCREMENT BY 1;
