@@ -13,7 +13,7 @@ down_services(){
 docker exec  $DOCKER_ID  /bin/bash  ./create_schema.sh  down_BD   
 }
 
-down_services(){
+start_services(){
 docker exec  $DOCKER_ID  /bin/bash  ./create_schema.sh  start_BD    
 }
 
