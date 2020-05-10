@@ -69,14 +69,6 @@ exit
 }
 
 start_services(){
-set -e
-export INSTALL=/
-echo `hostname -I|awk '{print $1}'` `hostname -s` `hostname` >> /etc/hosts
-
-rm -rf /u01/app/oracle/product/18.0.0/dbhome_1/network/admin/listener.ora
-
-echo "Setting ENV"
-echo oracle:oracle | chpasswd
 export ORACLE_BASE=/u01/app/oracle
 export ORACLE_HOME=/u01/app/oracle/product/18.0.0/dbhome_1
 export ORACLE_SID=ORCL18 >> /home/oracle/.bashrc

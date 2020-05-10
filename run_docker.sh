@@ -6,6 +6,7 @@ export DOCKER_ID=$(docker container ls | grep bd_meli | awk '{print $1}')
 mount_BD(){
 docker run -it -d -p 1521:1521  --name=meli bd_meli 
 #Crea el usuario meli y sus tablas
+export DOCKER_ID=$(docker container ls | grep bd_meli | awk '{print $1}')
 docker exec  $DOCKER_ID  /bin/bash  ./create_schema.sh  mount_BD
 }
 
