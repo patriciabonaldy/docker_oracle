@@ -23,7 +23,6 @@ create table c##meli1.lote_site (
 	extension varchar2(5),
 	separador_columna varchar2(3),
 	fecha_insercion date,
-	tiempo_insercion varchar2(10),
 	estado varchar2(15),
 	detalle varchar2(1000) 
 );
