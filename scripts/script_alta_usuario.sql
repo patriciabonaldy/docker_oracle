@@ -37,7 +37,7 @@ create table c##meli1.detalle_lote_site (
 	start_time varchar2(30),
 	price float,
 	descripcion varchar2(1000),
-	nickname varchar2(10),
+	nickname varchar2(100),
 	name varchar2(20),
 	categoria varchar2(20),
 	constraint pk_dls primary key
