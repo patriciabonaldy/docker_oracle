@@ -34,7 +34,7 @@ create table c##meli1.detalle_lote_site (
 	id_lote number(10),
  	site varchar2(20),
 	id_item number,
-	start_time date,
+	start_time varchar2(30),
 	price float,
 	descripcion varchar2(1000),
 	nickname varchar2(10),
