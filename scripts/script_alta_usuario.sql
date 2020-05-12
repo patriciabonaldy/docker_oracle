@@ -63,7 +63,6 @@ comment on column c##meli1.lote_site.encode is 'Formato del archivo ASCII, UFT-8
 comment on column c##meli1.lote_site.extension is 'Extension que indica tipo de archivo CSV, JSON, etc.';
 comment on column c##meli1.lote_site.separador_columna is 'Separador de columnas coma, punto, etc.';
 comment on column c##meli1.lote_site.fecha_insercion is 'Fecha en que se inserto el registro en la base de datos.';
-comment on column c##meli1.lote_site.tiempo_insercion is 'Tiempo en segundos que tardo la insercion.';
 comment on column c##meli1.lote_site.estado is 'Indica el estado ACTIVE / NON ACTIVE.';
 comment on column c##meli1.lote_site.detalle is 'Detalle del item.';
 
